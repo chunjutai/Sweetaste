@@ -1,0 +1,132 @@
+// web global setting
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body,
+a,
+button
+{
+    font-family: $sans-font;
+    font-size: $base-font-size; 
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    color: $primary-dark;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+input{
+    border: none;
+}
+button:focus,
+input:focus{
+    outline: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* main container */
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+}
+/* font */
+.serif-font{
+    font-family: $serif-font;
+}
+.font-size-20{
+    font-size: $font-size-20;
+}
+.font-size-24{
+    font-size: $font-size-24;
+}
+.text-light{
+    color: $primary-light;
+}
+.text-secondary-light{
+    color: $secondary-light;
+}
+.font-weight-100{
+    font-weight: $font-weight-100;
+}
+.font-weight-700{
+    font-weight: $font-weight-700;
+}
+.line-height-small{
+    line-height: $base-line-height*0.8;
+}
+/* icon */
+.icon-28{
+    font-size: $icon-size-28;
+}
+.icon-20{
+    font-size: $icon-size-20;
+}
+/* color */
+.background-light{
+    background-color: $primary-light;
+}
+.background-dark{
+    background-color: $primary-dark;
+}
+.accent-color{
+    background: $accent-color;
+}
+.secondary-background-light{
+    background-color: $secondary-light;
+}
+/* main space */
+.mb-20{
+    margin-bottom: $spacing-20;
+}
+.mb-30{
+    margin-bottom: $spacing-30;
+}
+.mb-40{
+    margin-bottom: $spacing-40;
+}
+.pt-20{
+    padding-top: $spacing-20;
+}
+.pt-30{
+    padding-top: $spacing-30;
+}
+.pt-40{
+    padding-top: $spacing-40;
+}
+.pb-20{
+    padding-bottom: $spacing-20;
+}
+.pb-30{
+    padding-bottom: $spacing-30;
+}
+.pb-40{
+    padding-bottom: $spacing-40;
+}
+// secondary space
+.mb-8{
+    margin-bottom: $spacing-8;
+}
+.mb-16{
+    margin-bottom: $spacing-16;
+}
+.pt-16{
+    padding-top: $spacing-16;
+}
+.pt-14{
+    padding-top: $spacing-14;
+}
+.pb-16{
+    padding-bottom: $spacing-16;
+}
+.pb-14{
+    padding-bottom: $spacing-14;
+}

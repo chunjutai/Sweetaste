@@ -1,0 +1,40 @@
+@mixin pc{
+    @media(max-width: 940px){
+        @content;
+    }
+}
+@mixin pad{
+    @media(max-width: 768px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media(max-width: 568px){
+        @content;
+    }
+}
+@mixin replace-h1-with-logo($logo-path){
+    background-image: url($logo-path);
+    text-indent: 101%;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@mixin animation($animation-name){
+    @keyframes shake{
+        from { transform: rotate(30deg) scale(1.5);}
+        to   { transform: rotate(-30deg);}
+    }
+    animation-name: $animation-name;
+}
+@mixin img-crop($width, $height){
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+@mixin circle($width, $height){
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+}

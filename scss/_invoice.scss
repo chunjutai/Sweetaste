@@ -1,0 +1,136 @@
+.mainInvoice{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 780px;
+    margin: 0 auto;
+    @include pad{
+        max-width: 720px;
+    }
+}
+.invoice{
+    width: 55%;
+    @include mobile{
+        width: 100%;
+        margin-bottom: $spacing-20;
+    }
+    &Container{
+        padding-right: $spacing-40;
+        padding-left: $spacing-40;
+        @include pad{
+            padding-right: $spacing-20;
+            padding-left: $spacing-20;
+        }
+    }
+    &Title{
+        display: flex;
+        justify-content: space-between;
+    }
+    h2{
+        font-size: $base-font-size*2.25;
+        letter-spacing: 3px;
+    }
+    &Type{
+        display: flex;
+        justify-content: space-between;
+        li{
+            width: 50%;
+            button{
+                width: 100%;               
+                border: 1px solid $primary-light;  
+            }
+        }
+    }
+    &Input{
+        button{
+            width: 100%;
+            letter-spacing: 3px;
+        }
+    }
+}
+.procedure{
+    display: flex;
+    align-items: center;
+    &Line{
+        width: 65px;
+        height: 0;
+        border-bottom: 1px solid $primary-light;
+    }
+    .outerCircle{
+        @include circle(20px, 20px);
+        border: 1px solid $primary-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .innerCircle{
+        @include circle(15px, 15px);
+        background-color: $primary-light;
+    }
+}
+.btn-active{
+    color: $primary-dark;
+    background-color: $primary-light;
+}
+.Input{
+    &Email{
+        display: flex;
+        flex-direction: column;        
+        .email{
+            padding-left: $spacing-20;
+            padding-right: $spacing-20;
+            &::placeholder{
+                color: $secondary-light;
+            }
+        }
+    }
+    &TaxIDnumber{
+        display: flex;
+        flex-direction: column;
+        .taxIDnumber{
+            padding-left: $spacing-20;
+            padding-right: $spacing-20;
+            &::placeholder{
+                color: $secondary-light;
+            }
+        }
+    }
+}
+.orderList{
+    width: 42%;
+    @include pad{
+        width: 45%;
+    }
+    @include mobile{
+        display: none;
+    }
+    margin-bottom: $base-spacing-size*6;
+    &Container{
+        padding-left: $spacing-20;
+        padding-right: $spacing-20;
+    }
+    h2{
+        text-align: center;
+    }
+    &Abstract{
+        border: solid 1px $primary-light;
+        li{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &Item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            @include img-crop(55%,100px);
+        }
+    }
+}
+.shoppingList{
+    border: solid 1px $primary-light;
+    &Detail{
+        width: 40%;
+    }
+}

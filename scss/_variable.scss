@@ -1,0 +1,30 @@
+// color
+$primary-light: #EAF0ED;
+$primary-dark: #3F5D45;
+$secondary-light: #8DA291;
+$accent-color: #FFE180;
+// font
+$base-font-size: 16px;
+$font-size-20: $base-font-size*1.25;
+$font-size-24: $base-font-size*1.5;
+
+$base-font-weight: 400;
+$font-weight-100: $base-font-weight*0.25;
+$font-weight-700: $base-font-weight*1.75;
+
+$base-line-height: 1.5;
+
+$sans-font: "Segoe UI", "Noto Sans TC", sans-serif;
+$serif-font: Georgia, "Noto Serif TC", serif;
+// main space
+$base-spacing-size: 10px;
+$spacing-20: $base-spacing-size*2;
+$spacing-30: $base-spacing-size*3;
+$spacing-40: $base-spacing-size*4;
+// secondary space
+$spacing-8: $base-spacing-size*0.8;
+$spacing-16: $base-spacing-size*1.6;
+$spacing-14: $base-spacing-size*1.4;
+// icon
+$icon-size-28: $base-font-size*1.75;
+$icon-size-20: $base-font-size*1.25;

@@ -1,0 +1,155 @@
+.banner{
+    @include mobile(){
+        margin-bottom: $spacing-20;
+    }
+    img{
+        width: 100%;
+    }
+}
+.mainProduct{
+    display: flex;
+    justify-content: space-between;
+    @include pc(){
+        width: 95%;
+    }
+    @include pad(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &List{
+        width: 68%;
+        @include pad(){
+            width: 95%;
+        }
+    }
+}
+.classifiedMenu{
+    width: 32%;
+    @include pad(){
+        width: 100%;
+        margin-bottom: $spacing-30;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            width: 50%;
+        }
+    }
+    @include mobile(){
+        margin-bottom: $base-spacing-size;
+        li{
+            width: 100%;
+        }
+    }
+    h2{
+        text-align: center;
+    }
+    a{
+        text-align: center;
+        &:hover{
+            background-color: $primary-light;
+        }
+    }
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* 30px-20px [已扣除.product li的 margin-bottom: 20px] */
+    @include pad(){
+        justify-content: space-between;
+    }
+    @include mobile(){
+        margin-bottom: 0;
+    }
+    li{
+        display: flex;
+        flex-direction: column;
+        width: 47%;
+        margin-left: 3%;
+        @include pad(){
+            width: 48.5%;
+            margin-left: 0;
+        }
+        @include mobile(){
+            width: 100%;
+        }
+    }
+    &Img{
+        position: relative;
+        img{
+            width: 100%;
+        }
+    }
+    &Details{
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        border: 1px solid $primary-light;
+        .name{
+            text-align: center;
+            width: 60%;
+            border-right: 1px solid $primary-light;
+        }
+        .price{
+            text-align: center;
+            width: 40%;
+        }
+    }
+    .addToCart{
+        text-align: center;
+        &:hover{
+            color: $primary-light;
+            background-color: $primary-dark;
+        }
+    }
+}
+.like{
+    position: absolute;
+    top: 9px; /* 19-10 */
+    right: 12px; /* 22-10 */
+    padding: 10px 10px 20px 20px;/* 增加點擊範圍 top,right需減10px */
+    &:hover{
+        @include animation(shake);
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+}
+.todaySpecial{
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    padding: $spacing-8;
+    letter-spacing: 3px;
+}
+.page{
+    display: flex;
+    justify-content: flex-end;
+    li{
+        width: 9.4%;/*47%(.product li的width)/5(.page li共有5個)=9.4%*/
+        @include pad(){
+            width: 9.7%;/*48.5/5=9.7希望.page一直保持與.product li等寬*/
+        }
+        @include pad(){
+            width: 20%;
+        }
+    }   
+    a{
+        border: solid 1px $primary-light;
+        text-align: center;
+        padding: $spacing-16;
+    }
+    &Num:hover{
+        color: $primary-light;
+        background-color: $primary-dark;    
+    }
+    .front:hover{
+        background-color: $primary-light;
+    }
+    .back:hover{
+        background-color: $primary-light;
+    }    
+}
